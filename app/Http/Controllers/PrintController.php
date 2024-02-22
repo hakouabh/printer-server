@@ -36,6 +36,9 @@ class PrintController extends Controller
 
         $printer->setLogo(public_path('logo-small.png'));
         $printer->setQRcode("$request->store_website/shop");
+        $printer->setWebSite($request->store_website);
+        $printer->setFaceBook($request->facebook);
+        $printer->setInstagram($request->instagram);
         $printer->printReceipt();
     }
 }
